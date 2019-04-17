@@ -127,7 +127,7 @@ class GUI(wx.Frame):
                 configFile=True
                 fconf=open(os.environ["ALLUSERSPROFILE"]+"/gpicsync.conf","r+")
             else: configFile= False
-        if sys.platform==("linux2" or "darwin"):
+        if sys.platform in ("linux2", "darwin"):
             confPath=os.path.expanduser("~/.gpicsync.conf")
             print "Searching configuration file ~/.gpicsync.conf"
             if os.path.isfile(confPath):
